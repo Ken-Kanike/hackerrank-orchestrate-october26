@@ -1,0 +1,23 @@
+{
+ "exported_at": "2026-03-04T10:00:00Z",
+ "origin": "custom_case",
+ "record_count": 2,
+ "records": [
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "account_service",
+   "resource_id": "account_100",
+   "record_type": "USER_PROFILE",
+   "result": "NOT_FOUND",
+   "subject_reference": "old.ada@mail.test"
+  },
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "analytics_platform",
+   "resource_id": "analytics_300",
+   "record_type": "ANALYTICS_PROFILE",
+   "result": "IDENTIFIABLE",
+   "subject_reference": "15f92306bdcf54f8165753408207cfc018c27f6b08a56046e1ba0f62fd816c09"
+  }
+ ]
+}

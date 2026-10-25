@@ -1,0 +1,23 @@
+{
+ "exported_at": "2026-03-04T10:00:00Z",
+ "origin": "custom_case",
+ "record_count": 2,
+ "records": [
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "account_service",
+   "resource_id": "account_100",
+   "record_type": "USER_PROFILE",
+   "result": "NOT_FOUND",
+   "subject_reference": "ada.example@mail.test"
+  },
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "integration_service",
+   "resource_id": "data_flow_100",
+   "record_type": "DATA_FLOW",
+   "result": "ACTIVE",
+   "subject_reference": "ada.example@mail.test"
+  }
+ ]
+}

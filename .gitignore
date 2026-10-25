@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+code/.cache/
+code.zip
+code/runs/
+code/evaluation/_gate_out.csv
+code/evaluation/_*.csv

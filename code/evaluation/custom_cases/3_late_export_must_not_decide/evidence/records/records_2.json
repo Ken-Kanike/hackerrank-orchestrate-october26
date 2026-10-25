@@ -1,0 +1,15 @@
+{
+ "exported_at": "2026-03-06T10:00:00Z",
+ "origin": "custom_case",
+ "record_count": 1,
+ "records": [
+  {
+   "recorded_at": "2026-03-05T09:00:00Z",
+   "system": "search_service",
+   "resource_id": "search_300",
+   "record_type": "SEARCH_INDEX_ENTRY",
+   "result": "NOT_FOUND",
+   "subject_reference": "ada.example@mail.test"
+  }
+ ]
+}

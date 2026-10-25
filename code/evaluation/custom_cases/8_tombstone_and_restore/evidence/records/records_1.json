@@ -1,0 +1,31 @@
+{
+ "exported_at": "2026-03-04T10:00:00Z",
+ "origin": "custom_case",
+ "record_count": 3,
+ "records": [
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "account_service",
+   "resource_id": "account_100",
+   "record_type": "USER_PROFILE",
+   "result": "NOT_FOUND",
+   "subject_reference": "ada.example@mail.test"
+  },
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "identity_service",
+   "resource_id": "tombstone_600",
+   "record_type": "ACCOUNT_TOMBSTONE",
+   "result": "PII",
+   "subject_reference": "ada.example@mail.test"
+  },
+  {
+   "recorded_at": "2026-03-04T10:00:00Z",
+   "system": "backup_service",
+   "resource_id": "backup_500",
+   "record_type": "BACKUP_ARCHIVE",
+   "result": "ACTIVE",
+   "subject_reference": "ada.example@mail.test"
+  }
+ ]
+}

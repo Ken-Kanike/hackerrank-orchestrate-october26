@@ -1,0 +1,2 @@
+user_id,name,email,phone,email_hash,updated_at
+user_01,Ada Example,ada.example@mail.test,+1 555 010 0001,044a0b37dc4927784f166f7bc16aae68b8edf570f3dad07f5fa9db76285bfa62,2026-02-01T00:00:00Z

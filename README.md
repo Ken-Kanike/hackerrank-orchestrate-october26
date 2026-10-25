@@ -1,5 +1,27 @@
 # HackerRank Orchestrate - October 2026
 
+## Our solution (start here)
+
+A deterministic audit engine with an LLM layer for text and pixels. It resolves current and historical identities, turns every evidence file into
+observations, reconstructs each resource's state at `audit_at`, applies `deletion_rules.csv` as data, and compiles the ordered finding /
+remediation / verification plan. Full architecture, run commands, flags and honest limitations: [`code/README.md`](./code/README.md).
+
+```bash
+pip install -r code/requirements.txt
+python code/main.py                      # writes output.csv (518 rows); hybrid if keys exist in .env, else deterministic offline
+python code/tools/gate.py                # regression gate (tests + 32 samples + 8 end-to-end custom datasets + full run)
+python code/evaluation/reports.py        # regenerates the two required reports
+python code/package.py                   # builds code.zip
+```
+**Web UI:** [`docs/index.html`](./docs/index.html) is a single-file interface that runs the same engine in the browser (GitHub Pages: branch `main`, folder `/docs`).
+
+**Documentation:** [Architecture](./docs/ARCHITECTURE.md) | [Agents](./docs/AGENTS.md) | [Accuracy and methodology](./docs/ACCURACY.md) | [Web UI](./docs/WEB_UI.md) | [Data, output and policy](./docs/DATA_AND_POLICY.md) | [Code README](./code/README.md) | [Limitations](./limitations.md)
+
+Required reports: [`code/evaluation/evaluation_report.md`](./code/evaluation/evaluation_report.md) and
+[`code/evaluation/usage_report.md`](./code/evaluation/usage_report.md) (also copied to `evaluation/` at the archive root by `code/package.py`).
+
+---
+
 ## Ghost Data Still Exists
 
 Build an AI agent that audits whether a user's personal data was actually deleted.
