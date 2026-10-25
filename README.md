@@ -1,5 +1,8 @@
 # HackerRank Orchestrate - October 2026
 
+![System Screenshot 1](./ss1.png)
+![System Screenshot 2](./ss2.png)
+
 ## Our solution (start here)
 
 A deterministic audit engine with an LLM layer for text and pixels. It resolves current and historical identities, turns every evidence file into
