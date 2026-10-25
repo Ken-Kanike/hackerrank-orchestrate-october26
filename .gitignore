@@ -14,3 +14,8 @@ code/evaluation/_*.csv
 dist/
 build/
 .render-buildpacks.json
+
+# Traces
+agent-trace/
+agent-trace.zip
+qna.md
