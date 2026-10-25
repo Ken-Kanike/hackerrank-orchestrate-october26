@@ -13,7 +13,9 @@ python code/tools/gate.py                # regression gate (tests + 32 samples +
 python code/evaluation/reports.py        # regenerates the two required reports
 python code/package.py                   # builds code.zip
 ```
-**Web UI:** [`docs/index.html`](./docs/index.html) is a single-file interface that runs the same engine in the browser (GitHub Pages: branch `main`, folder `/docs`).
+**Web UI & Live Public URL:**
+- **Live Demo (GitHub Pages):** [https://ken-kanike.github.io/hackerrank-orchestrate-october26/](https://ken-kanike.github.io/hackerrank-orchestrate-october26/)
+- **Local / Source:** [`docs/index.html`](./docs/index.html) is a single-file interface that runs the same engine in the browser (GitHub Pages: branch `main`, folder `/docs`).
 
 **Documentation:** [Architecture](./docs/ARCHITECTURE.md) | [Agents](./docs/AGENTS.md) | [Accuracy and methodology](./docs/ACCURACY.md) | [Web UI](./docs/WEB_UI.md) | [Data, output and policy](./docs/DATA_AND_POLICY.md) | [Code README](./code/README.md) | [Limitations](./limitations.md)
 

@@ -1,0 +1,11 @@
+# Pyrefly / Pyright type-checker configuration
+# server.py adds code/ to sys.path at runtime; tell the checker about it so
+# that `auditor.*` imports resolve correctly without changing any source files.
+
+[tool.pyrefly]
+python_path = ["code"]
+
+[tool.pyright]
+pythonVersion = "3.11"
+extraPaths = ["code"]
+reportMissingImports = false

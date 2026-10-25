@@ -8,3 +8,9 @@ code.zip
 code/runs/
 code/evaluation/_gate_out.csv
 code/evaluation/_*.csv
+
+# Deployment
+*.egg-info/
+dist/
+build/
+.render-buildpacks.json

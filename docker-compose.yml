@@ -1,0 +1,48 @@
+version: "3.9"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Ghost Data Still Exists — docker-compose
+#
+# Quick start:
+#   cp .env.example .env        # fill in your API keys (optional for offline mode)
+#   docker compose up api       # start the REST API   → http://localhost:8000
+#   docker compose run --rm cli # run the CLI pipeline → writes output.csv
+#
+# The dataset/ directory is mounted read-only into each service.
+# output.csv and run traces are written to the repo root (mapped to /app inside).
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  # ── REST API (Render / local dev) ──────────────────────────────────────────
+  api:
+    build: .
+    command: ["api"]
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env.example      # safe defaults — no real keys
+    environment:
+      - PORT=8000
+      # Override with real keys: set them in .env or export before compose up
+    volumes:
+      - ./dataset:/app/dataset:ro   # real dataset mounted read-only
+      - ./output.csv:/app/output.csv  # write output here
+      - ./code/runs:/app/code/runs    # per-run trace artifacts
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── CLI pipeline (one-shot) ────────────────────────────────────────────────
+  cli:
+    build: .
+    command: ["cli", "--mode", "offline"]
+    env_file:
+      - .env.example
+    volumes:
+      - ./dataset:/app/dataset:ro
+      - ./output.csv:/app/output.csv
+      - ./code/runs:/app/code/runs
+    restart: "no"   # run once and exit
